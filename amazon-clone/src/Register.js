@@ -13,7 +13,12 @@ function Register(){
         event.preventDefault();
         axios.post(`http://localhost:8080/register?userName=${userName}&mobileNo=${mobileNo}&email=${email}"&password=${password}`
         ).then(response =>{
-            alert(response);
+            if(response.data == "registered"){
+                alert("Registered successfully");
+                window.location.reload();
+            } else{
+                alert("Registration failed. Please try again after sometime")
+            }
         });
     }
 
