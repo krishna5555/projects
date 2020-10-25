@@ -2,7 +2,6 @@ package com.example.demo;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,14 +30,21 @@ public class RegisterController {
 		System.out.println(userModel);
 
 		Configuration configuration = new Configuration()
-										  .configure("hibernate.cfg.xml")
-										  .addAnnotatedClass(UserModel.class);
+				  .configure("hibernate.cfg.xml")
+				  .addAnnotatedClass(UserModel.class);
 		SessionFactory sessionFactory = configuration.buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		
-		Transaction transaction = session.beginTransaction();
-		session.save(userModel);
-		transaction.commit();
+		try {
+//			Transaction transaction = session.beginTransaction();
+			session.save(userModel);
+//			transaction.commit();
+		} catch(Exception e) {
+			System.out.println(e.fillInStackTrace());
+			return "failed";
+		} finally {
+			session.close();
+		}
 		
 		return "registered";
 	}

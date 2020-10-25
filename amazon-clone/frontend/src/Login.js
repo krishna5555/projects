@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
+import axios from 'axios';
 
 function Login(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const loginAccount = (event) => {
+        event.preventDefault();
+        axios.post(`http://localhost:8080/login?email=${email}&password=${password}`)
+             .then((response) => {
+                alert(response.data);
+             });
+    }
 
     return (
         <div className="login">
@@ -21,11 +30,11 @@ function Login(){
                     <input value={email} type="text" onChange={event => setEmail(event.target.value)} />
                     <h5>Password</h5>
                     <input value={password} type="password" onChange={event => setPassword(event.target.value)} />
-                    <button type="submit" className="regin_signInButton">Sign In</button>
+                    <button type="submit" className="login_signInButton" onClick={loginAccount}>Sign In</button>
                 </form>
                 <p>By signing-in you agree to the AMAZON FAKE CLONE Conditions of Use & Sale. Please
                         see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.</p>
-                <button className="login_registerButton">Create your Amazon Account</button>
+                <Link to="/register"><button className="login_registerButton">Create your Amazon Account</button></Link>
             </div>
         </div>
     );
