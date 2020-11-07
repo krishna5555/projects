@@ -1,0 +1,10 @@
+.chat{
+    display: flex;
+    border: 1px solid whitesmoke;
+    padding: 4%
+
+}
+
+.chat_detail{
+    padding-left: 5%;
+}

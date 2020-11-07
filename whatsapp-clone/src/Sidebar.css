@@ -1,0 +1,21 @@
+.sidebar{
+    flex: 0.35;
+    border-right: 1px solid gray;
+}
+
+.sidebar_header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: lightgray;
+    height: 50px;
+}
+
+.sidebar_headerRight{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar_chats_new_chat{
+    padding: 4%;
+}
