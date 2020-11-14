@@ -1,6 +1,7 @@
 package com.example.expense.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -12,6 +13,7 @@ import lombok.NoArgsConstructor;
 public class Category {
 
 	@Id
+	@GeneratedValue
 	private Long id;
 
 	//Travel, Grocery

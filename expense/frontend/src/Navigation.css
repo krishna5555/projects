@@ -1,0 +1,14 @@
+.navigation{
+  display: flex;
+  margin-left: 60%;
+  padding: 1%;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+.navigation_element{
+  margin-right: 10px;
+}

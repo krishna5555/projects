@@ -1,11 +1,12 @@
 package com.example.expense.model;
 
-import java.time.Instant;
-
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -17,15 +18,19 @@ import lombok.NoArgsConstructor;
 public class Expense {
 
 	@Id
+	@GeneratedValue
 	private Long id;
 
-	private Instant expenseDate;
+	private String expenseDate;
 	
 	private String description;
+	
+	private String location;
 	
 	@ManyToOne
 	private Category category;
 	
+	@JsonIgnore
 	@ManyToOne
 	private User user;
 	
@@ -37,11 +42,11 @@ public class Expense {
 		this.id = id;
 	}
 
-	public Instant getExpenseDate() {
+	public String getExpenseDate() {
 		return expenseDate;
 	}
 
-	public void setExpenseDate(Instant expenseDate) {
+	public void setExpenseDate(String expenseDate) {
 		this.expenseDate = expenseDate;
 	}
 
@@ -67,6 +72,14 @@ public class Expense {
 
 	public void setUser(User user) {
 		this.user = user;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
 	}
 
 }
