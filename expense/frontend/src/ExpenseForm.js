@@ -12,6 +12,7 @@ function ExpenseForm(){
     const [category, setCategory] = useState("");
     const [date, setDate] = useState("");
     const [location, setLocation] = useState("");
+    const [amount, setAmount] = useState("");
     const [expenseFormData, setExpenseFormData] = useState("");
 
     //we are initializing categoriesList as an array as we are expecting
@@ -28,23 +29,23 @@ function ExpenseForm(){
         var expenseData = {
                             "description" : title,
                             "category" : {
-                                "id" : 1,
-                                "name" : category
+                                "id" : category.split("-")[0],
+                                "name" : category.split("-")[1]
                             },
                             "expenseDate" : date,
                             "location" : location,
-                            "user" : {
-                                "id" : 1,
-                                "name" : "john"
-                            }
+                            "amount" : amount
                         }
         setExpenseFormData(expenseData);
-    });
+    }, [title, category, date, location, amount]);
 
     function submitExpenseForm(event){
-
         //to prevent browser refresh
         event.preventDefault();
+
+        if(!validateExpenseForm()){
+            return false;
+        }
 
         // call expense controller using fetch()
         fetch("http://localhost:8080/api/submitExpenseForm", {
@@ -65,6 +66,18 @@ function ExpenseForm(){
         setLocation("");
     }
 
+    function validateExpenseForm(){
+        if(expenseFormData.description == "" ||
+           expenseFormData.category.name == "" ||
+           expenseFormData.expenseData == "" ||
+           expenseFormData.location == "" ||
+           expenseFormData.amount == ""){
+               alert("Please fill all the fields");
+               return false;
+           }
+           return true;
+    }
+
     return (
         <>
             <form className="expenseForm" onSubmit={submitExpenseForm}>
@@ -78,7 +91,7 @@ function ExpenseForm(){
                             id="demo-simple-select"
                             onChange = {event => setCategory(event.target.value)}>
                                 {categoriesList.map((category) => {
-                                    return <MenuItem value={category.name}>{category.name}</MenuItem>;
+                                    return <MenuItem key={category.id} value={category.id + "-" + category.name}>{category.name}</MenuItem>;
                                 })}
                     </Select>
                 </FormControl>
@@ -95,11 +108,13 @@ function ExpenseForm(){
                 />
                 <br/>
                 <TextField label="Location" onChange = {event => setLocation(event.target.value)} />
+                <br/>
+                <TextField label="Amount($)" onChange = {event => setAmount(event.target.value)} />
                 <br/><br/>
                 <Button type="submit" className="submitButton" variant="contained" color="primary">
                     Save
                 </Button>
-                <Button type="reset" className="resetButton" variant="contained" color="default">
+                <Button type="reset" onClick={resetExpenseForm} className="resetButton" variant="contained" color="default">
                     Cancel
                 </Button>
             </form>

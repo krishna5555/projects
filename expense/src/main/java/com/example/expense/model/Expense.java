@@ -27,6 +27,8 @@ public class Expense {
 	
 	private String location;
 	
+	private Double amount;
+	
 	@ManyToOne
 	private Category category;
 	
@@ -80,6 +82,14 @@ public class Expense {
 
 	public void setLocation(String location) {
 		this.location = location;
+	}
+
+	public Double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(Double amount) {
+		this.amount = amount;
 	}
 
 }

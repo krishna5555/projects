@@ -38,6 +38,7 @@ function ExpenseList(){
                         <TableCell align="right"><strong>Location</strong></TableCell>
                         <TableCell align="right"><strong>Date</strong></TableCell>
                         <TableCell align="right"><strong>Category</strong></TableCell>
+                        <TableCell align="right"><strong>Amount($)</strong></TableCell>
                         <TableCell align="right"><strong>Action</strong></TableCell>
                     </TableRow>
                     </TableHead>
@@ -50,6 +51,7 @@ function ExpenseList(){
                             <TableCell align="right">{row.location}</TableCell>
                             <TableCell align="right">{row.expenseDate}</TableCell>
                             <TableCell align="right">{row.category.name}</TableCell>
+                            <TableCell align="right">{row.amount}</TableCell>
                             <TableCell align="right">
                                 <Button
                                 variant="contained"
