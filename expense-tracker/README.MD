@@ -14,7 +14,7 @@ Expense tracker app can be used to:
 * Docker [Docker image URL](https://hub.docker.com/layers/krishna5555/expense-tracker/latest/images/sha256-3c36108b21b760c386c6824ff3e1deefb474cc1df7f0998b4d6cdbb6645d81e0?context=repo&tab=layers)
 * Kubernetes
 
-Below image is a high level overview of the application:
+**Below image is a high level overview of the application:**
 ![image](https://user-images.githubusercontent.com/25320977/99179952-2661bc00-2748-11eb-9fa1-2203e2110d02.png)
 
 **Flow from end user's point of view**:
@@ -25,7 +25,7 @@ Below image is a high level overview of the application:
 * Each worker node has multiple pods with the docker container.
 * The application’s backend logic(Spring-Boot project) resides in the docker container.
 * All the backend-logic to add, modify, delete, view the expenses are written in Java(Spring-Boot app).
-* Once the response is ready, it is sent back to the React app and shown the user.
+* Once the response is ready, it is sent back to the React app and shown to the user.
 
 **Below are some of the screenshots of the project:**
 **Expense Tracker Dashboard:**
