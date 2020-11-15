@@ -28,6 +28,7 @@ Expense tracker app can be used to:
 * Once the response is ready, it is sent back to the React app and shown to the user.
 
 **Below are some of the screenshots of the project:**
+
 **Expense Tracker Dashboard:**
 ![image](https://user-images.githubusercontent.com/25320977/99179960-311c5100-2748-11eb-9dee-aa17b72e833b.png)
 
