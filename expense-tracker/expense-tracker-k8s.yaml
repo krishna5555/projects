@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: expense-tracker-k8s-demo-deployment
+  labels:
+    app: expense-tracker-k8s-demo
+spec:
+  replicas: 8
+  selector:
+    matchLabels:
+      app: expense-tracker-k8s-demo
+  template:
+    metadata:
+      labels:
+        app: expense-tracker-k8s-demo
+    spec:
+      containers:
+      - name: expense-tracker-k8s-demo
+        image: krishna5555/expense-tracker
+        ports:
+        - containerPort: 8080
