@@ -11,7 +11,7 @@ Expense tracker app can be used to:
 * Spring-Boot (Used Spring REST)
 * Spring Data-JPA
 * React JS (Extensively used state management, React hooks such as useState() and useEffect())
-* Docker [Docker image URL](https://hub.docker.com/layers/krishna5555/expense-tracker/latest/images/sha256-3c36108b21b760c386c6824ff3e1deefb474cc1df7f0998b4d6cdbb6645d81e0?context=repo&tab=layers)
+* Docker ([Docker image URL](https://hub.docker.com/layers/krishna5555/expense-tracker/latest/images/sha256-3c36108b21b760c386c6824ff3e1deefb474cc1df7f0998b4d6cdbb6645d81e0?context=repo&tab=layers))
 * Kubernetes
 
 **Below image is a high level overview of the application:**
