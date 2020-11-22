@@ -1,3 +1,1 @@
-## Idea
-
-[https://uidesigndaily.com/](https://uidesigndaily.com/posts/sketch-birthdays-list-card-widget-day-1042)
+![image](https://github.com/krishna5555/projects/blob/master/react-projects/1-birthday-reminder/screenshot.png)
