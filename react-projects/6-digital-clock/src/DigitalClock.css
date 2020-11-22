@@ -1,0 +1,20 @@
+.outerSection{
+    border: 10px solid black;
+    margin: 10px;
+    width: 40%;
+    margin-left: 25%;
+}
+
+.outerSection h1{
+    color: gray;
+}
+
+.timeSection{
+    background-color:black;
+    color: white;
+    border-radius: 4em;
+    width: 40%;
+    margin-left: 28%;
+    padding: 1px;
+    margin-bottom: 4px;
+}
