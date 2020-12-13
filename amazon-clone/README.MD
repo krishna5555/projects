@@ -16,7 +16,7 @@ This is an E-commerce application that tries to imitate the desktop version of a
 - Add items to the basket
 - Remove items from the basket
 
-## Check out some of the screenshots:
+## Check out some of the screenshots
 - Dashboard
 ![ShoppingCart Dashboard](https://github.com/krishna5555/bootstrap/blob/main/assets/ecommercedashboard.png)
 
