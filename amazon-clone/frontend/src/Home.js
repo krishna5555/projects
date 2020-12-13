@@ -6,32 +6,32 @@ function Home(){
     return (
         <div className="home">
             <div className="homeContainer">
-                <img className="home_image" src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt=""/>
+                <img className="home_image" src="https://github.com/krishna5555/bootstrap/blob/main/assets/ecommerce.png?raw=true" alt=""/>
 
                 <div className="home_row">
                     <Product
                         id="12321341"
-                        title="The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback"
-                        price={11.96}
+                        title="Paperback"
+                        price={1485}
                         rating={5}
-                        image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg"
+                        image="https://indesignskills.com/wp-content/uploads/2017/07/Paperback-Cover-Mockup.jpg"
                     />
                     <Product
                         id="49538094"
-                        title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
-                        price={239.0}
+                        title="Smart Watch"
+                        price={18999.0}
                         rating={4}
-                        image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
+                        image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
                     />
                 </div>
 
                 <div className="home_row">
                     <Product
                         id="4903850"
-                        title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
+                        title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
                         price={199.99}
                         rating={3}
-                        image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
+                        image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
                     />
                     <Product
                         id="23445930"

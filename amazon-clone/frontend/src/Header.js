@@ -10,7 +10,7 @@ function Header(){
     return (
         <div className="header">
             {/* logo */}
-            <img className="header_logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"/>
+            <div className="header_logo">Shopping Cart</div>
 
             {/* search */}
             <div className="header_search">

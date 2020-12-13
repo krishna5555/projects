@@ -32,9 +32,8 @@ function Login(){
                     <input value={password} type="password" onChange={event => setPassword(event.target.value)} />
                     <button type="submit" className="login_signInButton" onClick={loginAccount}>Sign In</button>
                 </form>
-                <p>By signing-in you agree to the AMAZON FAKE CLONE Conditions of Use & Sale. Please
-                        see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.</p>
-                <Link to="/register"><button className="login_registerButton">Create your Amazon Account</button></Link>
+                <p>Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.</p>
+                <Link to="/register"><button className="login_registerButton">Create your Account</button></Link>
             </div>
         </div>
     );
