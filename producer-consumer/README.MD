@@ -8,4 +8,5 @@
 
 - Consumer is allowed to consumer only if a new number is produced by the Producer.
 
+## Output
 ![Output](https://github.com/krishna5555/projects/blob/master/producer-consumer/output.png)
